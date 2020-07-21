@@ -35,5 +35,19 @@ class Solution {
       $head = $head->next;
     }
     return $dummy->next;
+//    递归
+//    if(!$head || !$head->next) {
+//      return $head;
+//    }
+//    $next = $head->next;
+//    if($head->val === $next->val) {
+//      while($next && $head->val === $next->val) {
+//        $next = $next->next;
+//      }
+//      $head = $this->deleteDuplicates($next);
+//    } else {
+//      $head->next = $this->deleteDuplicates($head->next);
+//    }
+//    return $head;
   }
 }
