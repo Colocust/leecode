@@ -15,6 +15,8 @@ class Solution {
    * @return ListNode
    */
   function removeDuplicateNodes($head) {
+    //时间复杂度O(n)
+    //空间复杂度O(n)
     $data = [];
     $dummy = new ListNode(null);
     $dummy->next = $head;
@@ -28,5 +30,21 @@ class Solution {
       }
     }
     return $dummy->next;
+//    时间复杂度O(n2)
+//    空间复杂度O(1)
+//    php会超出时间限制
+//    $l1 = $head;
+//    while ($l1) {
+//      $l2 = $l1;
+//      while ($l2->next) {
+//        if ($l2->next->val == $l1->val) {
+//          $l2->next = $l2->next->next;
+//        } else {
+//          $l2 = $l2->next;
+//        }
+//      }
+//      $l1 = $l1->next;
+//    }
+//    return $head;
   }
 }
