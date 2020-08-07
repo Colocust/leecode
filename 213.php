@@ -7,37 +7,31 @@ class Solution {
      * @return Integer
      */
     function rob($nums) {
-        if (empty($nums)) return 0;
-        if (count($nums) == 1) return $nums[0];
-        $dp1 = [];
-        $dp2 = [];
+        if (empty($nums)) {
+            return 0;
+        }
 
         $length = count($nums);
-
-        //[0,n-2]
-        //[1,n-1]
-        $dp1[$length - 2] = $nums[$length - 2];
-        for ($i = $length - 3; $i >= 0; $i--) {
-            $dp1[$i] = 0;
-
-            for ($j = $i; $j <= $length - 2; $j++) {
-                $append = $j + 2 <= $length - 2 ? $dp1[$j + 2] : 0;
-                $dp1[$i] = max($dp1[$i], $nums[$j] + $append);
-            }
+        if ($length == 1) {
+            return $nums[0];
         }
 
-        $dp2[$length - 1] = $nums[$length - 1];
-        for ($i = $length - 2; $i >= 1; $i--) {
-            $dp2[$i] = 0;
+        $dp1[0] = $nums[0];
+        $dp1[1] = max($nums[1], $nums[0]);
 
-            for ($j = $i; $j <= $length - 1; $j++) {
-                $append = $j + 2 <= $length - 1 ? $dp2[$j + 2] : 0;
-                $dp2[$i] = max($dp2[$i], $nums[$j] + $append);
-            }
+        for ($i = 2; $i < $length - 1; $i++) {
+            $dp1[$i] = max($nums[$i] + $dp1[$i - 2], $dp1[$i - 1]);
         }
-        return max($dp1[0], $dp2[1]);
+
+        $dp2[1] = $nums[1];
+        $dp2[2] = max($nums[1], $nums[2]);
+        for ($i = 3; $i < $length; $i++) {
+            $dp2[$i] = max($nums[$i] + $dp2[$i - 2], $dp2[$i - 1]);
+        }
+
+        return max($dp1[$length - 2], $dp2[$length - 1]);
     }
 }
 
 $solution = new Solution();
-var_dump($solution->rob([0]));
+var_dump($solution->rob([1, 3, 1, 3, 100]));
