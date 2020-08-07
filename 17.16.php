@@ -12,20 +12,14 @@ class Solution {
         if ($length == 1) return $nums[0];
 
         $dp = [];
-        $dp[$length - 1] = $nums[$length - 1];
+        $dp[0] = $nums[0];
+        $dp[1] = max($nums[0], $nums[1]);
 
-        for ($i = $length - 2; $i >= 0; $i--) {
-            $dp[$i] = 0;
-
-            for ($j = $i; $j < $length; $j++) {
-                $append = 0;
-                if ($j + 2 < $length) {
-                    $append = $dp[$j + 2];
-                }
-                $dp[$i] = max($dp[$i], $append + $nums[$j]);
-            }
+        for ($i = 2; $i < count($nums); $i++) {
+            $dp[$i] = max($dp[$i - 2] + $nums[$i], $dp[$i - 1]);
         }
-        return $dp[0];
+
+        return $dp[$length - 1];
     }
 }
 
