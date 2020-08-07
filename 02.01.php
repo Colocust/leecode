@@ -10,26 +10,26 @@
  */
 class Solution {
 
-  /**
-   * @param ListNode $head
-   * @return ListNode
-   */
-  function removeDuplicateNodes($head) {
-    //时间复杂度O(n)
-    //空间复杂度O(n)
-    $data = [];
-    $dummy = new ListNode(null);
-    $dummy->next = $head;
-    $pre = $dummy;
-    while ($pre) {
-      if (isset($data[$pre->next->val])) {
-        $pre->next = $pre->next->next;
-      } else {
-        $data[$pre->next->val] = 1;
-        $pre = $pre->next;
-      }
-    }
-    return $dummy->next;
+    /**
+     * @param ListNode $head
+     * @return ListNode
+     */
+    function removeDuplicateNodes($head) {
+        //时间复杂度O(n)
+        //空间复杂度O(n)
+        $data = [];
+        $dummy = new ListNode(null);
+        $dummy->next = $head;
+        $pre = $dummy;
+        while ($pre) {
+            if (isset($data[$pre->next->val])) {
+                $pre->next = $pre->next->next;
+            } else {
+                $data[$pre->next->val] = 1;
+                $pre = $pre->next;
+            }
+        }
+        return $dummy->next;
 //    时间复杂度O(n2)
 //    空间复杂度O(1)
 //    php会超出时间限制
@@ -46,5 +46,5 @@ class Solution {
 //      $l1 = $l1->next;
 //    }
 //    return $head;
-  }
+    }
 }

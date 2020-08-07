@@ -2,26 +2,26 @@
 
 class Solution {
 
-  /**
-   * @param Integer[] $numbers
-   * @param Integer $target
-   * @return Integer[]
-   */
+    /**
+     * @param Integer[] $numbers
+     * @param Integer $target
+     * @return Integer[]
+     */
 
-  function twoSum($numbers, $target) {
-    $temp = [];
-    foreach ($numbers as $k => $v) {
-      $temp[$v] = $k;
-    }
+    function twoSum($numbers, $target) {
+        $temp = [];
+        foreach ($numbers as $k => $v) {
+            $temp[$v] = $k;
+        }
 
-    foreach ($numbers as $k => $v) {
-      $a = $target - $v;
-      if (isset($temp[$a])) {
-        return [++$k, ++$temp[$a]];
-      }
+        foreach ($numbers as $k => $v) {
+            $a = $target - $v;
+            if (isset($temp[$a])) {
+                return [++$k, ++$temp[$a]];
+            }
+        }
+        return [];
     }
-    return [];
-  }
 //  function twoSum($numbers, $target) {
 //    $i = 0;
 //    $j = count($numbers) - 1;

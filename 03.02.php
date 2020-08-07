@@ -1,62 +1,62 @@
 <?php
 
 class MinStack {
-  private $stack;
-  private $minStack;
+    private $stack;
+    private $minStack;
 
-  /**
-   * initialize your data structure here.
-   */
-  function __construct() {
-    $this->stack = new SplStack();
-    $this->minStack = new SplStack();
-  }
+    /**
+     * initialize your data structure here.
+     */
+    function __construct() {
+        $this->stack = new SplStack();
+        $this->minStack = new SplStack();
+    }
 
-  /**
-   * @param Integer $x
-   * @return NULL
-   */
-  function push($x) {
-    $this->stack->push($x);
-    if ($this->minStack->isEmpty() || $this->minStack->top() >= $x) {
-      $this->minStack->push($x);
+    /**
+     * @param Integer $x
+     * @return NULL
+     */
+    function push($x) {
+        $this->stack->push($x);
+        if ($this->minStack->isEmpty() || $this->minStack->top() >= $x) {
+            $this->minStack->push($x);
+        }
+        return null;
     }
-    return null;
-  }
 
-  /**
-   * @return NULL
-   */
-  function pop() {
-    if ($this->stack->isEmpty()) {
-      return null;
+    /**
+     * @return NULL
+     */
+    function pop() {
+        if ($this->stack->isEmpty()) {
+            return null;
+        }
+        $pop = $this->stack->pop();
+        if ($pop == $this->minStack->top()) {
+            $this->minStack->pop();
+        }
+        return null;
     }
-    $pop = $this->stack->pop();
-    if ($pop == $this->minStack->top()) {
-      $this->minStack->pop();
-    }
-    return null;
-  }
 
-  /**
-   * @return Integer
-   */
-  function top() {
-    if ($this->stack->isEmpty()) {
-      return null;
+    /**
+     * @return Integer
+     */
+    function top() {
+        if ($this->stack->isEmpty()) {
+            return null;
+        }
+        return $this->stack->top();
     }
-    return $this->stack->top();
-  }
 
-  /**
-   * @return Integer
-   */
-  function getMin() {
-    if ($this->minStack->isEmpty()) {
-      return null;
+    /**
+     * @return Integer
+     */
+    function getMin() {
+        if ($this->minStack->isEmpty()) {
+            return null;
+        }
+        return $this->minStack->top();
     }
-    return $this->minStack->top();
-  }
 }
 
 /**

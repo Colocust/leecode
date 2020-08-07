@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="184b7b94-08ac-4470-8b85-c9609c70edc7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/123.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/124.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/62.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1003.php" beforeDir="false" afterPath="$PROJECT_DIR$/1003.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1019.php" beforeDir="false" afterPath="$PROJECT_DIR$/1019.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1021.php" beforeDir="false" afterPath="$PROJECT_DIR$/1021.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1047.php" beforeDir="false" afterPath="$PROJECT_DIR$/1047.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/876.php" beforeDir="false" afterPath="$PROJECT_DIR$/876.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/921.php" beforeDir="false" afterPath="$PROJECT_DIR$/921.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/946.php" beforeDir="false" afterPath="$PROJECT_DIR$/946.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +42,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -91,7 +97,7 @@
       <workItem from="1596551126720" duration="6673000" />
       <workItem from="1596615325521" duration="1563000" />
       <workItem from="1596633711064" duration="2957000" />
-      <workItem from="1596676970271" duration="13486000" />
+      <workItem from="1596676970271" duration="20989000" />
     </task>
     <servers />
   </component>
@@ -99,15 +105,17 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595857934125">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state x="184" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596722906241">
+      <screen x="0" y="23" width="1440" height="796" />
     </state>
+    <state x="184" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.796@0.23.1440.796" timestamp="1596722906241" />
     <state x="184" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.797@0.23.1440.797" timestamp="1595857934125" />
-    <state x="491" y="155" key="NewPhpClassDialog" timestamp="1596034327596">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state x="491" y="155" key="NewPhpClassDialog" timestamp="1596715794022">
+      <screen x="0" y="23" width="1440" height="796" />
     </state>
+    <state x="491" y="155" key="NewPhpClassDialog/0.23.1440.796@0.23.1440.796" timestamp="1596715794022" />
     <state x="491" y="155" key="NewPhpClassDialog/0.23.1440.797@0.23.1440.797" timestamp="1596034327596" />
-    <state x="542" y="352" key="NewPhpFileDialog" timestamp="1596708670793">
+    <state x="542" y="352" key="NewPhpFileDialog" timestamp="1596724291915">
       <screen x="0" y="23" width="1440" height="796" />
     </state>
     <state x="542" y="372" key="NewPhpFileDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1595483366685" />
@@ -115,20 +123,26 @@
     <state x="542" y="372" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1595512646885" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.796/1440.23.1920.1057@0.23.1440.796" timestamp="1596708670793" />
     <state x="2163" y="460" key="NewPhpFileDialog/0.23.1440.796/1440.23.1920.1057@1440.23.1920.1057" timestamp="1596678479026" />
-    <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.796@0.23.1440.796" timestamp="1596637996813" />
+    <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.796@0.23.1440.796" timestamp="1596724291915" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.797/1440.0.1920.1080@0.23.1440.797" timestamp="1595487707691" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1596425981614" />
     <state x="2163" y="460" key="NewPhpFileDialog/0.23.1440.797/1440.23.1920.1057@1440.23.1920.1057" timestamp="1596536142360" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.797@0.23.1440.797" timestamp="1596542929759" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1595303045798" />
-    <state x="229" y="60" key="SettingsEditor" timestamp="1595924367173">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state x="229" y="60" key="SettingsEditor" timestamp="1596763787612">
+      <screen x="0" y="23" width="1440" height="796" />
     </state>
+    <state x="229" y="60" key="SettingsEditor/0.23.1440.796/1440.23.1920.1057@0.23.1440.796" timestamp="1596763787612" />
+    <state x="229" y="60" key="SettingsEditor/0.23.1440.796@0.23.1440.796" timestamp="1596725074019" />
     <state x="229" y="60" key="SettingsEditor/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1595924367173" />
     <state x="229" y="60" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1595333956473" />
     <state x="521" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595687940224">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="521" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.797@0.23.1440.797" timestamp="1595687940224" />
+    <state x="385" y="143" width="670" height="676" key="search.everywhere.popup" timestamp="1596722813258">
+      <screen x="0" y="23" width="1440" height="796" />
+    </state>
+    <state x="385" y="143" width="670" height="676" key="search.everywhere.popup/0.23.1440.796@0.23.1440.796" timestamp="1596722813258" />
   </component>
 </project>

@@ -9,24 +9,24 @@
  */
 
 class Solution {
-  /**
-   * @param ListNode $head
-   * @return Boolean
-   */
-  function hasCycle($head) {
-    if (!$head || !$head->next) {
-      return false;
-    }
-    $fast = $head->next;
-    $slow = $head;
-    while ($fast) {
+    /**
+     * @param ListNode $head
+     * @return Boolean
+     */
+    function hasCycle($head) {
+        if (!$head || !$head->next) {
+            return false;
+        }
+        $fast = $head->next;
+        $slow = $head;
+        while ($fast) {
 
-      if ($fast === $slow) {
-        return true;
-      }
-      $fast = $fast->next->next;
-      $slow = $slow->next;
+            if ($fast === $slow) {
+                return true;
+            }
+            $fast = $fast->next->next;
+            $slow = $slow->next;
+        }
+        return false;
     }
-    return false;
-  }
 }

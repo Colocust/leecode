@@ -9,19 +9,19 @@
  */
 
 class Solution {
-  /**
-   * @param ListNode $headA
-   * @param ListNode $headB
-   * @return ListNode
-   */
-  function getIntersectionNode($headA, $headB) {
-    $l1 = $headA;
-    $l2 = $headB;
+    /**
+     * @param ListNode $headA
+     * @param ListNode $headB
+     * @return ListNode
+     */
+    function getIntersectionNode($headA, $headB) {
+        $l1 = $headA;
+        $l2 = $headB;
 
-    while($l1 !== $l2) {
-      $l1 = $l1 ? $l1->next : $headB;
-      $l2 = $l2 ? $l2->next : $headA;
+        while ($l1 !== $l2) {
+            $l1 = $l1 ? $l1->next : $headB;
+            $l2 = $l2 ? $l2->next : $headA;
+        }
+        return $l1;
     }
-    return $l1;
-  }
 }

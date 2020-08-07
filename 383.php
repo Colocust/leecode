@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Definition for a singly-linked list.
  * class ListNode {
@@ -9,22 +10,22 @@
  */
 class Solution {
 
-  /**
-   * @param ListNode $head
-   * @param Integer $k
-   * @return Integer
-   */
-  function kthToLast($head, $k) {
-    $fast = $head;
-    $slow = $head;
-    while($k>0) {
-      $fast = $fast->next;
-      $k--;
+    /**
+     * @param ListNode $head
+     * @param Integer $k
+     * @return Integer
+     */
+    function kthToLast($head, $k) {
+        $fast = $head;
+        $slow = $head;
+        while ($k > 0) {
+            $fast = $fast->next;
+            $k--;
+        }
+        while ($fast) {
+            $fast = $fast->next;
+            $slow = $slow->next;
+        }
+        return $slow->val;
     }
-    while($fast) {
-      $fast = $fast->next;
-      $slow = $slow->next;
-    }
-    return $slow->val;
-  }
 }

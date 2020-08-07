@@ -2,12 +2,12 @@
 
 class Solution {
 
-  /**
-   * @param Integer[] $nums
-   * @return Integer
-   */
-  function rob($nums) {
-    if (empty($nums)) return 0;
+    /**
+     * @param Integer[] $nums
+     * @return Integer
+     */
+    function rob($nums) {
+        if (empty($nums)) return 0;
 //    $length = count($nums);
 //
 //    $mem = [];
@@ -21,19 +21,19 @@ class Solution {
 //      }
 //    }
 //    return $mem[0];
-    $length = count($nums);
-    $mem = [];
-    $mem[0] = $nums[0];
+        $length = count($nums);
+        $mem = [];
+        $mem[0] = $nums[0];
 
-    for ($i = 1; $i < $length; $i++) {
-      $mem[$i] = 0;
-      for ($j = $i; $j >= 0; $j--) {
-        $append = $j - 2 < 0 ? 0 : $mem[$j - 2];
-        $mem[$i] = max($mem[$i], $nums[$j] + $append);
-      }
+        for ($i = 1; $i < $length; $i++) {
+            $mem[$i] = 0;
+            for ($j = $i; $j >= 0; $j--) {
+                $append = $j - 2 < 0 ? 0 : $mem[$j - 2];
+                $mem[$i] = max($mem[$i], $nums[$j] + $append);
+            }
+        }
+        return $mem[$length - 1];
     }
-    return $mem[$length - 1];
-  }
 }
 
 $solution = new Solution();

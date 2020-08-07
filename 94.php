@@ -11,26 +11,26 @@
  */
 class Solution {
 
-  /**
-   * @param TreeNode $root
-   * @return Integer[]
-   */
-  function inorderTraversal($root) {
-    if (!$root) {
-      return [];
-    }
-    $stack = [];
+    /**
+     * @param TreeNode $root
+     * @return Integer[]
+     */
+    function inorderTraversal($root) {
+        if (!$root) {
+            return [];
+        }
+        $stack = [];
 
-    $left = $this->inorderTraversal($root->left);
-    foreach ($left as $vL) {
-      $stack[] = $vL;
-    }
-    $stack[] = $root->val;
-    $right = $this->inorderTraversal($root->right);
+        $left = $this->inorderTraversal($root->left);
+        foreach ($left as $vL) {
+            $stack[] = $vL;
+        }
+        $stack[] = $root->val;
+        $right = $this->inorderTraversal($root->right);
 
-    foreach ($right as $vR) {
-      $stack[] = $vR;
+        foreach ($right as $vR) {
+            $stack[] = $vR;
+        }
+        return $stack;
     }
-    return $stack;
-  }
 }

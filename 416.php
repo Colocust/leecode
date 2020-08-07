@@ -2,32 +2,32 @@
 
 class Solution {
 
-  /**
-   * @param Integer[] $nums
-   * @return Boolean
-   */
-  function canPartition($nums) {
-    $sum = array_sum($nums);
-    if ($sum % 2 !== 0) return false;
+    /**
+     * @param Integer[] $nums
+     * @return Boolean
+     */
+    function canPartition($nums) {
+        $sum = array_sum($nums);
+        if ($sum % 2 !== 0) return false;
 
-    $C = $sum / 2;
+        $C = $sum / 2;
 
-    $dp = [];
-    for ($i = 0; $i <= $C; $i++) {
-      $dp[0 % 2][$i] = $i == $nums[0];
-    }
-
-    for ($i = 1; $i < count($nums); $i++) {
-      for ($j = 0; $j <= $C; $j++) {
-        $dp[$i % 2][$j] = $dp[($i - 1) % 2][$j];
-        if ($j >= $nums[$i]) {
-          $dp[$i % 2][$j] = $dp[($i - 1) % 2][$j] || $dp[($i - 1) % 2][$j - $nums[$i]];
+        $dp = [];
+        for ($i = 0; $i <= $C; $i++) {
+            $dp[0 % 2][$i] = $i == $nums[0];
         }
-      }
-    }
 
-    return $dp[(count($nums) - 1) % 2][$C];
-  }
+        for ($i = 1; $i < count($nums); $i++) {
+            for ($j = 0; $j <= $C; $j++) {
+                $dp[$i % 2][$j] = $dp[($i - 1) % 2][$j];
+                if ($j >= $nums[$i]) {
+                    $dp[$i % 2][$j] = $dp[($i - 1) % 2][$j] || $dp[($i - 1) % 2][$j - $nums[$i]];
+                }
+            }
+        }
+
+        return $dp[(count($nums) - 1) % 2][$C];
+    }
 }
 
 $solution = new Solution();

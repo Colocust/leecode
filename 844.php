@@ -2,34 +2,34 @@
 
 class Solution {
 
-  /**
-   * @param String $S
-   * @param String $T
-   * @return Boolean
-   */
-  function backspaceCompare($S, $T) {
-    $sStack = [];
-    $tStack = [];
+    /**
+     * @param String $S
+     * @param String $T
+     * @return Boolean
+     */
+    function backspaceCompare($S, $T) {
+        $sStack = [];
+        $tStack = [];
 
-    for ($s = 0; $s < strlen($S); $s++) {
-      if ($S[$s] == '#') {
-        if ($sStack) {
-          array_pop($sStack);
+        for ($s = 0; $s < strlen($S); $s++) {
+            if ($S[$s] == '#') {
+                if ($sStack) {
+                    array_pop($sStack);
+                }
+            } else {
+                $sStack[] = $S[$s];
+            }
         }
-      } else {
-        $sStack[] = $S[$s];
-      }
-    }
 
-    for ($t = 0; $t < strlen($T); $t++) {
-      if ($T[$t] == '#') {
-        if ($tStack) {
-          array_pop($tStack);
+        for ($t = 0; $t < strlen($T); $t++) {
+            if ($T[$t] == '#') {
+                if ($tStack) {
+                    array_pop($tStack);
+                }
+            } else {
+                $tStack[] = $T[$t];
+            }
         }
-      } else {
-        $tStack[] = $T[$t];
-      }
+        return $sStack == $tStack;
     }
-    return $sStack == $tStack;
-  }
 }

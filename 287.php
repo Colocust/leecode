@@ -2,11 +2,11 @@
 
 class Solution {
 
-  /**
-   * @param Integer[] $nums
-   * @return Integer
-   */
-  function findDuplicate($nums) {
+    /**
+     * @param Integer[] $nums
+     * @return Integer
+     */
+    function findDuplicate($nums) {
 //    $left = 1;
 //    $right = count($nums) - 1;
 //    $result = -1;
@@ -26,21 +26,21 @@ class Solution {
 //    }
 //    return $result;
 
-    $slow = $nums[0];
-    $fast = $nums[$nums[0]];
+        $slow = $nums[0];
+        $fast = $nums[$nums[0]];
 
-    while ($slow !== $fast) {
-      $slow = $nums[$slow];
-      $fast = $nums[$nums[$fast]];
-    }
-    $slow = 0;
+        while ($slow !== $fast) {
+            $slow = $nums[$slow];
+            $fast = $nums[$nums[$fast]];
+        }
+        $slow = 0;
 
-    while ($slow !== $fast) {
-      $fast = $nums[$fast];
-      $slow = $nums[$slow];
+        while ($slow !== $fast) {
+            $fast = $nums[$fast];
+            $slow = $nums[$slow];
+        }
+        return $slow;
     }
-    return $slow;
-  }
 }
 
 $solution = new Solution();

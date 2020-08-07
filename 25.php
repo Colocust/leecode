@@ -9,22 +9,22 @@
  * }
  */
 class ListNode {
-  public $val = 0;
-  public $next = null;
+    public $val = 0;
+    public $next = null;
 
-  function __construct($val) {
-    $this->val = $val;
-  }
+    function __construct($val) {
+        $this->val = $val;
+    }
 }
 
 class Solution {
 
-  /**
-   * @param ListNode $head
-   * @param Integer $k
-   * @return ListNode
-   */
-  function reverseKGroup($head, $k) {
+    /**
+     * @param ListNode $head
+     * @param Integer $k
+     * @return ListNode
+     */
+    function reverseKGroup($head, $k) {
 //    递归
 //    $length = 0;
 //    $cur = $head;
@@ -49,35 +49,35 @@ class Solution {
 //    }
 //    return $head;
 
-    $dummy = new ListNode(null);
-    $dummy->next = $head;
-    $pre = $dummy;
-    while ($head) {
-      $tail = $pre;
-      for ($i = 0; $i < $k; $i++) {
-        $tail = $tail->next;
-        if (is_null($tail)) return $dummy->next;
-      }
+        $dummy = new ListNode(null);
+        $dummy->next = $head;
+        $pre = $dummy;
+        while ($head) {
+            $tail = $pre;
+            for ($i = 0; $i < $k; $i++) {
+                $tail = $tail->next;
+                if (is_null($tail)) return $dummy->next;
+            }
 
-      $next = $tail->next;
-      $this->reverse($head, $tail);
-      $pre->next = $tail;
-      $head->next = $next;
-      $pre = $head;
-      $head = $next;
+            $next = $tail->next;
+            $this->reverse($head, $tail);
+            $pre->next = $tail;
+            $head->next = $next;
+            $pre = $head;
+            $head = $next;
+        }
+        return $dummy->next;
     }
-    return $dummy->next;
-  }
 
-  function reverse(ListNode $head, ListNode $tail): void {
-    $prev = $tail->next;
-    while ($prev !== $tail) {
-      $next = $head->next;
-      $head->next = $prev;
-      $prev = $head;
-      $head = $next;
+    function reverse(ListNode $head, ListNode $tail): void {
+        $prev = $tail->next;
+        while ($prev !== $tail) {
+            $next = $head->next;
+            $head->next = $prev;
+            $prev = $head;
+            $head = $next;
+        }
     }
-  }
 
 }
 

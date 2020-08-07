@@ -10,29 +10,29 @@
  */
 class Solution {
 
-  /**
-   * @param ListNode $head
-   * @param Integer $n
-   * @return ListNode
-   */
-  function removeNthFromEnd($head, $n) {
-    $temp = $head;
-    $length = 1;
-    while ($temp->next) {
-      $length++;
-      $temp = $temp->next;
-    }
+    /**
+     * @param ListNode $head
+     * @param Integer $n
+     * @return ListNode
+     */
+    function removeNthFromEnd($head, $n) {
+        $temp = $head;
+        $length = 1;
+        while ($temp->next) {
+            $length++;
+            $temp = $temp->next;
+        }
 
-    $cycleTime = $length - $n;
-    $dummy = new ListNode(null);
-    $dummy->next = $head;
+        $cycleTime = $length - $n;
+        $dummy = new ListNode(null);
+        $dummy->next = $head;
 
-    $current = $dummy;
-    for ($i = 0; $i < $cycleTime; $i++) {
-      $current = $current->next;
-    }
-    $current->next = $current->next->next;
-    return $dummy->next;
+        $current = $dummy;
+        for ($i = 0; $i < $cycleTime; $i++) {
+            $current = $current->next;
+        }
+        $current->next = $current->next->next;
+        return $dummy->next;
 
 //    $dummy = new ListNode(null);
 //    $dummy->next = $head;
@@ -50,5 +50,5 @@ class Solution {
 //
 //    $slow->next = $slow->next->next;
 //    return $dummy->next;
-  }
+    }
 }

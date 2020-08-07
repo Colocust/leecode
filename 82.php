@@ -10,31 +10,31 @@
  */
 class Solution {
 
-  /**
-   * @param ListNode $head
-   * @return ListNode
-   */
-  function deleteDuplicates($head) {
-    if (!$head || !$head->next) {
-      return $head;
-    }
-    $dummy = new ListNode(null);
-    $dummy->next = $head;
+    /**
+     * @param ListNode $head
+     * @return ListNode
+     */
+    function deleteDuplicates($head) {
+        if (!$head || !$head->next) {
+            return $head;
+        }
+        $dummy = new ListNode(null);
+        $dummy->next = $head;
 
-    $pre = $dummy;
-    while ($head && $head->next) {
-      if ($head->val !== $head->next->val) {
-        $head = $head->next;
-        $pre = $pre->next;
-        continue;
-      }
-      while ($head->next && $head->val == $head->next->val) {
-        $head = $head->next;
-      }
-      $pre->next = $head->next;
-      $head = $head->next;
-    }
-    return $dummy->next;
+        $pre = $dummy;
+        while ($head && $head->next) {
+            if ($head->val !== $head->next->val) {
+                $head = $head->next;
+                $pre = $pre->next;
+                continue;
+            }
+            while ($head->next && $head->val == $head->next->val) {
+                $head = $head->next;
+            }
+            $pre->next = $head->next;
+            $head = $head->next;
+        }
+        return $dummy->next;
 //    递归
 //    if(!$head || !$head->next) {
 //      return $head;
@@ -49,5 +49,5 @@ class Solution {
 //      $head->next = $this->deleteDuplicates($head->next);
 //    }
 //    return $head;
-  }
+    }
 }
