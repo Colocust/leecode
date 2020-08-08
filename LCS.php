@@ -22,42 +22,14 @@ function LcsDP(string $s1, string $s2): string {
 
     if ($l1 == 0 || $l2 == 0) return 0;
 
-    $dp = [];
     $max = 0;
 
-    if ($s1[0] == $s2[0]) {
-        $dp[0][0] = 1;
-        $max = 1;
-    } else {
-        $dp[0][0] = 0;
-    }
+    $dp = array_fill(0, $l1 + 1, array_fill(0, $l2 + 1, 0));
 
-    for ($i = 1; $i < $l1; $i++) {
-        if ($s1[$i] == $s2[0]) {
-            $dp[$i][0] = 1;
-            $max = 1;
-        } else {
-            $dp[$i][0] = $dp[$i - 1][0];
-        }
-    }
-
-    for ($i = 1; $i < $l2; $i++) {
-        if ($s1[0] == $s2[$i]) {
-            $dp[0][$i] = 1;
-            $max = 1;
-        } else {
-            $dp[0][$i] = $dp[0][$i - 1];
-        }
-    }
-
-    for ($i = 1; $i < $l1; $i++) {
-        for ($j = 1; $j < $l2; $j++) {
-            if ($s1[$i] == $s2[$j]) {
-                $dp[$i][$j] = 1 + $dp[$i - 1][$j - 1];
-            } else {
-                $dp[$i][$j] = max($dp[$i - 1][$j], $dp[$i][$j - 1]);
-            }
-            $max = max($max, $dp[$i][$j]);
+    for ($i = $l1 - 1; $i >= 0; $i--) {
+        for ($j = $l2 - 1; $j >= 0; $j--) {
+            $dp[$i][$j] = $s1[$i] == $s2[$j] ? 1 + $dp[$i + 1][$j + 1] : 0;
+            $max = max($dp[$i][$j], $max);
         }
     }
 
@@ -80,3 +52,5 @@ function LcsDP(string $s1, string $s2): string {
 $s1 = 'dsda';
 $s2 = 'gags';
 echo LcsDP($s1, $s2) . PHP_EOL;
+
+//可对比718题 最长公共子序列和子串问题
