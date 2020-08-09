@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="184b7b94-08ac-4470-8b85-c9609c70edc7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/647.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +91,7 @@
       <workItem from="1596633711064" duration="2957000" />
       <workItem from="1596676970271" duration="36193000" />
       <workItem from="1596890120236" duration="11109000" />
-      <workItem from="1596960684657" duration="3194000" />
+      <workItem from="1596960684657" duration="4401000" />
     </task>
     <servers />
   </component>
@@ -111,7 +110,7 @@
     </state>
     <state x="491" y="155" key="NewPhpClassDialog/0.23.1440.796@0.23.1440.796" timestamp="1596715794022" />
     <state x="491" y="155" key="NewPhpClassDialog/0.23.1440.797@0.23.1440.797" timestamp="1596034327596" />
-    <state x="542" y="352" key="NewPhpFileDialog" timestamp="1596968946718">
+    <state x="542" y="352" key="NewPhpFileDialog" timestamp="1596970457887">
       <screen x="0" y="23" width="1440" height="796" />
     </state>
     <state x="542" y="372" key="NewPhpFileDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1595483366685" />
@@ -119,7 +118,7 @@
     <state x="542" y="372" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1595512646885" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.796/1440.23.1920.1057@0.23.1440.796" timestamp="1596708670793" />
     <state x="2163" y="460" key="NewPhpFileDialog/0.23.1440.796/1440.23.1920.1057@1440.23.1920.1057" timestamp="1596783328647" />
-    <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.796@0.23.1440.796" timestamp="1596968946718" />
+    <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.796@0.23.1440.796" timestamp="1596970457887" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.797/1440.0.1920.1080@0.23.1440.797" timestamp="1595487707691" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1596425981614" />
     <state x="2163" y="460" key="NewPhpFileDialog/0.23.1440.797/1440.23.1920.1057@1440.23.1920.1057" timestamp="1596536142360" />
