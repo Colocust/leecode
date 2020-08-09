@@ -10,15 +10,11 @@ class Solution {
         $length = strlen($s);
         $dp = [];
         $result = 0;
-        for ($i = 0; $i < $length; $i++) {
-            $result++;
-            $dp[$i][$i] = true;
-        }
 
-        for ($i = 1; $i < $length; $i++) {
-            for ($j = 0; $j < $i; $j++) {
+        for ($i = 0; $i < $length; $i++) {
+            for ($j = 0; $j <= $i; $j++) {
                 if ($s[$i] == $s[$j]) {
-                    if ($j + 1 == $i) {
+                    if ($i == $j || $i = $j + 1) {
                         $dp[$i][$j] = true;
                     } else {
                         $dp[$i][$j] = $dp[$i - 1][$j + 1];
