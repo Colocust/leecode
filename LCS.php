@@ -22,20 +22,19 @@ function LcsDP(string $s1, string $s2): string {
 
     if ($l1 == 0 || $l2 == 0) return 0;
 
-    $max = 0;
-
     $dp = array_fill(0, $l1 + 1, array_fill(0, $l2 + 1, 0));
 
     for ($i = $l1 - 1; $i >= 0; $i--) {
         for ($j = $l2 - 1; $j >= 0; $j--) {
-            $dp[$i][$j] = $s1[$i] == $s2[$j] ? 1 + $dp[$i + 1][$j + 1] : 0;
-            $max = max($dp[$i][$j], $max);
+            $dp[$i][$j] = $s1[$i] == $s2[$j] ? 1 + $dp[$i + 1][$j + 1] : max($dp[$i + 1][$j], $dp[$i][$j + 1]);
         }
     }
 
+    $max = $dp[0][0];
+
     $res = '';
-    for ($i = $l1 - 1; $i >= 0; $i--) {
-        for ($j = $l2 - 1; $j >= 0; $j--) {
+    for ($i = 0; $i < $l1; $i++) {
+        for ($j = 0; $j < $l2; $j++) {
             if ($dp[$i][$j] == $max && $s1[$i] == $s2[$j]) {
                 $res .= $s2[$j];
                 $max--;
@@ -50,7 +49,7 @@ function LcsDP(string $s1, string $s2): string {
 }
 
 $s1 = 'dsda';
-$s2 = 'gags';
+$s2 = 'sda';
 echo LcsDP($s1, $s2) . PHP_EOL;
 
 //可对比718题 最长公共子序列和子串问题
