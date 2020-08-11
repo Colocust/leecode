@@ -8,27 +8,28 @@ class Solution {
      */
     function canPartition($nums) {
         $sum = array_sum($nums);
-        if ($sum % 2 !== 0) return false;
-
-        $C = $sum / 2;
-
-        $dp = [];
-        for ($i = 0; $i <= $C; $i++) {
-            $dp[0 % 2][$i] = $i == $nums[0];
+        if ($sum % 2 !== 0) {
+            return false;
         }
 
-        for ($i = 1; $i < count($nums); $i++) {
-            for ($j = 0; $j <= $C; $j++) {
-                $dp[$i % 2][$j] = $dp[($i - 1) % 2][$j];
-                if ($j >= $nums[$i]) {
-                    $dp[$i % 2][$j] = $dp[($i - 1) % 2][$j] || $dp[($i - 1) % 2][$j - $nums[$i]];
-                }
+        $target = $sum / 2;
+        $dp[0] = true;
+
+        for ($i = 1; $i <= $target; $i++) {
+            if ($i == $nums[0]) {
+                $dp[$i] = true;
+            } else {
+                $dp[$i] = false;
             }
         }
-
-        return $dp[(count($nums) - 1) % 2][$C];
+        for ($i = 1; $i < count($nums); $i++) {
+            for ($j = $target; $j >= $nums[$i]; $j--) {
+                $dp[$j] = $dp[$j] || $dp[$j - $nums[$i]];
+            }
+        }
+        return $dp[$target];
     }
 }
 
 $solution = new Solution();
-var_dump($solution->canPartition([100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100]));
+var_dump($solution->canPartition(([1, 5, 11, 5])));
