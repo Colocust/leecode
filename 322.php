@@ -10,17 +10,12 @@ class Solution {
     function coinChange($coins, $amount) {
         if ($amount == 0) return 0;
 
-        $dp = [];
+        $dp = array_fill(1, $amount, PHP_INT_MAX);
         $dp[0] = 0;
-        for ($i = 1; $i <= $amount; $i++) {
-            $dp[$i] = PHP_INT_MAX;
-        }
 
-        for ($i = 1; $i <= $amount; $i++) {
-            for ($j = 0; $j < count($coins); $j++) {
-                if ($i >= $coins[$j]) {
-                    $dp[$i] = min($dp[$i], $dp[$i - $coins[$j]] + 1);
-                }
+        for ($i = 0; $i < count($coins); $i++) {
+            for ($j = $coins[$i]; $j <= $amount; $j++) {
+                $dp[$j] = min($dp[$j], $dp[$j - $coins[$i]] + 1);
             }
         }
         return $dp[$amount] == PHP_INT_MAX ? -1 : $dp[$amount];

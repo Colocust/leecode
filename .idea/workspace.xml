@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="184b7b94-08ac-4470-8b85-c9609c70edc7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/494.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/518.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/08.11.php" beforeDir="false" afterPath="$PROJECT_DIR$/08.11.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/322.php" beforeDir="false" afterPath="$PROJECT_DIR$/322.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/343.php" beforeDir="false" afterPath="$PROJECT_DIR$/343.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/377.php" beforeDir="false" afterPath="$PROJECT_DIR$/377.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/416.php" beforeDir="false" afterPath="$PROJECT_DIR$/416.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/494.php" beforeDir="false" afterPath="$PROJECT_DIR$/494.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +104,8 @@
       <workItem from="1597108314517" duration="237000" />
       <workItem from="1597114765717" duration="7352000" />
       <workItem from="1597130075061" duration="144000" />
-      <workItem from="1597150464575" duration="7983000" />
+      <workItem from="1597150464575" duration="8088000" />
+      <workItem from="1597202423753" duration="5853000" />
     </task>
     <servers />
   </component>
@@ -107,11 +113,11 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597196920748">
-      <screen x="0" y="23" width="1440" height="796" />
+    <state x="1685" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597205359572">
+      <screen x="1440" y="23" width="1920" height="1057" />
     </state>
     <state x="184" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.796/1440.23.1920.1057@0.23.1440.796" timestamp="1597196920748" />
-    <state x="1685" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.796/1440.23.1920.1057@1440.23.1920.1057" timestamp="1596772024131" />
+    <state x="1685" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.796/1440.23.1920.1057@1440.23.1920.1057" timestamp="1597205359572" />
     <state x="184" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.796@0.23.1440.796" timestamp="1597067485123" />
     <state x="184" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.797@0.23.1440.797" timestamp="1595857934125" />
     <state x="491" y="155" key="NewPhpClassDialog" timestamp="1596715794022">
@@ -119,14 +125,14 @@
     </state>
     <state x="491" y="155" key="NewPhpClassDialog/0.23.1440.796@0.23.1440.796" timestamp="1596715794022" />
     <state x="491" y="155" key="NewPhpClassDialog/0.23.1440.797@0.23.1440.797" timestamp="1596034327596" />
-    <state x="542" y="352" key="NewPhpFileDialog" timestamp="1597152986536">
-      <screen x="0" y="23" width="1440" height="796" />
+    <state x="2163" y="460" key="NewPhpFileDialog" timestamp="1597205352184">
+      <screen x="1440" y="23" width="1920" height="1057" />
     </state>
     <state x="542" y="372" key="NewPhpFileDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1595483366685" />
     <state x="2163" y="446" key="NewPhpFileDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1595477466792" />
     <state x="542" y="372" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1595512646885" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.796/1440.23.1920.1057@0.23.1440.796" timestamp="1597114828834" />
-    <state x="2163" y="460" key="NewPhpFileDialog/0.23.1440.796/1440.23.1920.1057@1440.23.1920.1057" timestamp="1596783328647" />
+    <state x="2163" y="460" key="NewPhpFileDialog/0.23.1440.796/1440.23.1920.1057@1440.23.1920.1057" timestamp="1597205352184" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.796@0.23.1440.796" timestamp="1597152986536" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.797/1440.0.1920.1080@0.23.1440.797" timestamp="1595487707691" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1596425981614" />
@@ -134,10 +140,10 @@
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.797@0.23.1440.797" timestamp="1596542929759" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1595303045798" />
     <state x="542" y="354" key="NewPhpFileDialog/0.23.1440.801@0.23.1440.801" timestamp="1597151921329" />
-    <state x="229" y="60" key="SettingsEditor" timestamp="1597150519570">
-      <screen x="0" y="23" width="1440" height="798" />
+    <state x="229" y="60" key="SettingsEditor" timestamp="1597202562140">
+      <screen x="0" y="23" width="1440" height="796" />
     </state>
-    <state x="229" y="60" key="SettingsEditor/0.23.1440.796/1440.23.1920.1057@0.23.1440.796" timestamp="1596763787612" />
+    <state x="229" y="60" key="SettingsEditor/0.23.1440.796/1440.23.1920.1057@0.23.1440.796" timestamp="1597202562140" />
     <state x="229" y="60" key="SettingsEditor/0.23.1440.796@0.23.1440.796" timestamp="1597067237506" />
     <state x="229" y="60" key="SettingsEditor/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1595924367173" />
     <state x="229" y="60" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1595333956473" />

@@ -31,4 +31,4 @@ class Solution {
 }
 
 $solution = new Solution();
-var_dump($solution->findTargetSumWays([0, 0], 0));
+var_dump($solution->findTargetSumWays([1, 1], 0));

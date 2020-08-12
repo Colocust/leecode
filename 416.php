@@ -22,7 +22,7 @@ class Solution {
                 $dp[$j] = $dp[$j] || $dp[$j - $nums[$i]];
             }
         }
-        var_dump($dp);exit;
+
         return $dp[$target];
     }
 }

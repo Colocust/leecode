@@ -8,16 +8,12 @@ class Solution {
      * @return Integer
      */
     function combinationSum4($nums, $target) {
-        $dp = [];
-
+        $dp = array_fill(1, $target, 0);
         $dp[0] = 1;
-        for ($i = 1; $i <= $target; $i++) $dp[$i] = 0;
 
         for ($i = 1; $i <= $target; $i++) {
             for ($j = 0; $j < count($nums); $j++) {
-                if ($i >= $nums[$j]) {
-                    $dp[$i] += $dp[$i - $nums[$j]];
-                }
+                if ($i >= $nums[$j]) $dp[$i] += $dp[$i - $nums[$j]];
             }
         }
         return $dp[$target];
