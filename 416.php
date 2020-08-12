@@ -13,20 +13,16 @@ class Solution {
         }
 
         $target = $sum / 2;
+
+        $dp = array_fill(1, $target, false);
         $dp[0] = true;
 
-        for ($i = 1; $i <= $target; $i++) {
-            if ($i == $nums[0]) {
-                $dp[$i] = true;
-            } else {
-                $dp[$i] = false;
-            }
-        }
-        for ($i = 1; $i < count($nums); $i++) {
+        for ($i = 0; $i < count($nums); $i++) {
             for ($j = $target; $j >= $nums[$i]; $j--) {
                 $dp[$j] = $dp[$j] || $dp[$j - $nums[$i]];
             }
         }
+        var_dump($dp);exit;
         return $dp[$target];
     }
 }
