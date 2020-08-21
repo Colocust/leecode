@@ -10,12 +10,12 @@ class Solution {
         $dp = [];
 
         $length = strlen($s);
-
+        $strLen = 1;
         $start = $length - 1;
-        $maxLength = 1;
+
         for ($i = $length - 1; $i >= 0; $i--) {
             $dp[$i][$i] = true;
-            for ($j = $i + 1; $j < $length; $j++) {
+            for ($j = $i + 1; $j < $length ; $j++) {
                 if ($s[$i] == $s[$j]) {
                     if ($j - $i < 3) {
                         $dp[$i][$j] = true;
@@ -25,15 +25,17 @@ class Solution {
                 } else {
                     $dp[$i][$j] = false;
                 }
-                if ($dp[$i][$j] && $j - $i + 1 > $maxLength) {
+
+                if ($dp[$i][$j] && $j - $i + 1 > $strLen) {
                     $start = $i;
-                    $maxLength = $j - $i + 1;
+                    $strLen = $j - $i + 1;
                 }
             }
         }
-        return substr($s, $start, $maxLength);
+
+        return substr($s, $start, $strLen);
     }
 }
 
 $solution = new Solution();
-var_dump($solution->longestPalindrome('babad'));
+var_dump($solution->longestPalindrome('bb'));

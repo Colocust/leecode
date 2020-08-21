@@ -26,7 +26,6 @@ class Solution {
                 }
             }
         }
-        var_dump($dp);exit;
         return $dp[strlen($word1)][strlen($word2)];
     }
 }

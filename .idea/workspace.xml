@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="184b7b94-08ac-4470-8b85-c9609c70edc7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/740.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/17.06.php" beforeDir="false" afterPath="$PROJECT_DIR$/17.06.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/300.php" beforeDir="false" afterPath="$PROJECT_DIR$/300.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/494.php" beforeDir="false" afterPath="$PROJECT_DIR$/494.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5.php" beforeDir="false" afterPath="$PROJECT_DIR$/5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/516.php" beforeDir="false" afterPath="$PROJECT_DIR$/516.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/523.php" beforeDir="false" afterPath="$PROJECT_DIR$/523.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/53.php" beforeDir="false" afterPath="$PROJECT_DIR$/53.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/718.php" beforeDir="false" afterPath="$PROJECT_DIR$/718.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/72.php" beforeDir="false" afterPath="$PROJECT_DIR$/72.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/813.php" beforeDir="false" afterPath="$PROJECT_DIR$/813.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/873.php" beforeDir="false" afterPath="$PROJECT_DIR$/873.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LCS.php" beforeDir="false" afterPath="$PROJECT_DIR$/LCS.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +111,11 @@
       <workItem from="1597130075061" duration="144000" />
       <workItem from="1597150464575" duration="8088000" />
       <workItem from="1597202423753" duration="6037000" />
-      <workItem from="1597325527061" duration="7235000" />
+      <workItem from="1597325527061" duration="8525000" />
+      <workItem from="1597584868770" duration="5924000" />
+      <workItem from="1597672781425" duration="2946000" />
+      <workItem from="1597759444977" duration="1457000" />
+      <workItem from="1597845754373" duration="14941000" />
     </task>
     <servers />
   </component>
@@ -124,7 +139,7 @@
     </state>
     <state x="491" y="155" key="NewPhpClassDialog/0.23.1440.796@0.23.1440.796" timestamp="1596715794022" />
     <state x="491" y="155" key="NewPhpClassDialog/0.23.1440.797@0.23.1440.797" timestamp="1596034327596" />
-    <state x="2163" y="460" key="NewPhpFileDialog" timestamp="1597385611683">
+    <state x="2163" y="460" key="NewPhpFileDialog" timestamp="1597908068528">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
     <state x="542" y="372" key="NewPhpFileDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1595483366685" />
@@ -132,13 +147,15 @@
     <state x="542" y="372" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1595512646885" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.796/1440.23.1920.1057@0.23.1440.796" timestamp="1597114828834" />
     <state x="2163" y="460" key="NewPhpFileDialog/0.23.1440.796/1440.23.1920.1057@1440.23.1920.1057" timestamp="1597376912555" />
-    <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.796@0.23.1440.796" timestamp="1597326881594" />
+    <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.796@0.23.1440.796" timestamp="1597675283266" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.797/1440.0.1920.1080@0.23.1440.797" timestamp="1595487707691" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1596425981614" />
     <state x="2163" y="460" key="NewPhpFileDialog/0.23.1440.797/1440.23.1920.1057@1440.23.1920.1057" timestamp="1596536142360" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.797@0.23.1440.797" timestamp="1596542929759" />
     <state x="542" y="352" key="NewPhpFileDialog/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1597375494973" />
-    <state x="2163" y="460" key="NewPhpFileDialog/0.23.1440.798/1440.23.1920.1057@1440.23.1920.1057" timestamp="1597385611683" />
+    <state x="2163" y="460" key="NewPhpFileDialog/0.23.1440.798/1440.23.1920.1057@1440.23.1920.1057" timestamp="1597903472094" />
+    <state x="542" y="353" key="NewPhpFileDialog/0.23.1440.798@0.23.1440.798" timestamp="1597759955427" />
+    <state x="2163" y="460" key="NewPhpFileDialog/0.23.1440.801/1440.23.1920.1057@1440.23.1920.1057" timestamp="1597908068528" />
     <state x="542" y="354" key="NewPhpFileDialog/0.23.1440.801@0.23.1440.801" timestamp="1597151921329" />
     <state x="1745" y="72" key="SettingsEditor" timestamp="1597385634278">
       <screen x="1440" y="23" width="1920" height="1057" />

@@ -17,16 +17,22 @@ class Solution {
 
         $dp = array_fill(0, $l1 + 1, array_fill(0, $l2 + 1, 0));
 
-        for ($i = $l1 - 1; $i >= 0; $i--) {
-            for ($j = $l2 - 1; $j >= 0; $j--) {
-                $dp[$i][$j] = $A[$i] == $B[$j] ? 1 + $dp[$i + 1][$j + 1] : 0;
-                $max = max($dp[$i][$j], $max);
+        for ($i = 1; $i <= $l1; $i++) {
+            for ($j = 1; $j <= $l2; $j++) {
+                if ($A[$i - 1] == $B[$j - 1]) {
+                    $dp[$i][$j] = $dp[$i - 1][$j - 1] + 1;
+                } else {
+                    $dp[$i][$j] = 0;
+                }
             }
         }
+        var_dump($dp);
+        exit;
+
 
         return $max;
     }
 }
 
 $solution = new Solution();
-var_dump($solution->findLength([1, 2, 3, 2, 1], [3, 2, 1, 4, 7]));
+var_dump($solution->findLength([1, 2, 3], [3, 4]));
