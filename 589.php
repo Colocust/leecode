@@ -16,28 +16,27 @@ class Solution {
      * @param Node $root
      * @return integer[]
      */
-    function postorder($root) {
-        if (!$root) return [];
-
-        $results = [];
+    function preorder($root) {
+//        if (!$root) return [];
+//
+//        $results[] = $root->val;
 //
 //        foreach ($root->children as $child) {
-//           $results = array_merge($results, $this->postorder($child));
+//            $results = array_merge($results, $this->preorder($child));
 //        }
-//        $results[] = $root->val;
+//        return $results;
+        if (!$root) return [];
 
         $stack[] = $root;
-
+        $results = [];
         while ($stack) {
             $pop = array_pop($stack);
             $results[] = $pop->val;
-
-            foreach ($pop->children as $child) {
+            $children = array_reverse($pop->children);
+            foreach ($children as $child) {
                 $stack[] = $child;
             }
         }
-
-
-        return array_reverse($results);
+        return $results;
     }
 }
