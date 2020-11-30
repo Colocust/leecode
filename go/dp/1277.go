@@ -1,8 +1,5 @@
 package main
 
-func main() {
-
-}
 
 func countSquares(matrix [][]int) int {
 	var dp [300][300]int

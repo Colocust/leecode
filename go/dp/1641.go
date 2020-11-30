@@ -4,10 +4,6 @@ import (
 	"fmt"
 )
 
-func main() {
-	fmt.Println(countVowelStrings(1))
-}
-
 func countVowelStrings(n int) int {
 	if n == 0 {
 		return 0
