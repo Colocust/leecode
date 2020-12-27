@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -21,9 +20,3 @@ func findContentChildren(g []int, s []int) int {
 	return res
 }
 
-func main() {
-	g := []int{1, 2, 3}
-	s := []int{1, 1}
-
-	fmt.Println(findContentChildren(g, s))
-}
