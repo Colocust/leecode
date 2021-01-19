@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -60,10 +59,4 @@ func reverse(s string) string {
 		ans += string(s[i])
 	}
 	return ans
-}
-
-func main() {
-	s := "3[a2[c]]"
-
-	fmt.Println(decodeString(s))
 }
