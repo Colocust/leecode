@@ -18,11 +18,12 @@ func rob(nums []int) int {
 }
 
 func getDp(nums []int) int {
-	dp := []int{nums[0], max(nums[0], nums[1])}
+	dp0, dp1 := nums[0], max(nums[0], nums[1])
 	for i := 2; i < len(nums); i++ {
-		dp = append(dp, max(dp[i-1], dp[i-2]+nums[i]))
+		v := max(dp0+nums[i], dp1)
+		dp0, dp1 = dp1, v
 	}
-	return dp[len(dp)-1]
+	return dp1
 }
 
 func main() {
