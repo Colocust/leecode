@@ -1,21 +1,21 @@
 package main
 
 func matrixScore(A [][]int) int {
-	width, height := len(A[0]), len(A)
+	height, width := len(A), len(A[0])
 	ans := height * (1 << (width - 1))
+
 	for w := 1; w < width; w++ {
-		num1 := 0
-		for _, v := range A {
-			if v[0] == v[w] {
-				num1++
+		numOf1 := 0
+		for h := 0; h < height; h++ {
+			if A[h][0] == A[h][w] {
+				numOf1++
 			}
 		}
 
-		if num1 < height-num1 {
-			num1 = height - num1
+		if height-numOf1 > numOf1 {
+			numOf1 = height - numOf1
 		}
-
-		ans += num1 * (1 << (width - 1 - w))
+		ans += numOf1 * (1 << (width - 1 - w))
 	}
 
 	return ans
