@@ -1,10 +1,5 @@
 package main
 
-import "fmt"
-
-func main() {
-	fmt.Println(numTrees(3))
-}
 
 func numTrees(n int) int {
 	dp := make([]int, n+1)
