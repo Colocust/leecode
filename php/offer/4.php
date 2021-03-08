@@ -1,47 +1,58 @@
 <?php
 
-
-class TreeNode
+class Solution
 {
-	var $val;
-	var $left = NULL;
-	var $right = NULL;
 
-	function __construct ($val)
+	/**
+	 * @param Integer[][] $matrix
+	 * @param Integer $target
+	 * @return Boolean
+	 */
+	function findNumberIn2DArray ($matrix, $target)
 	{
-		$this->val = $val;
-	}
-}
-
-/**
- * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
- *
- * @param pre int整型一维数组
- * @param vin int整型一维数组
- * @return TreeNode类
- */
-function reConstructBinaryTree ($pre, $vin): ?TreeNode
-{
-	if (count($pre) == 0 || count($vin) == 0) {
-		return null;
-	}
-
-	$node = new TreeNode($pre[0]);
-	if (count($pre) == 1) {
-		return $node;
-	}
-
-	for ($i = 0; $i < count($vin); $i++) {
-		if ($vin[$i] == $pre[0]) {
-			break;
+		if (count($matrix) == 0) {
+			return false;
 		}
+		$length = count($matrix[0]);
+		if ($length == 0) {
+			return false;
+		}
+
+		foreach ($matrix as $item) {
+			if ($item[0] > $target || $item[$length - 1] < $target) {
+				continue;
+			}
+
+			if ($this->find($item, $target, 0, $length - 1)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
-	$node->left = reConstructBinaryTree(array_slice($pre, 1, $i), array_slice($vin, 0, $i));
-	$node->right = reConstructBinaryTree(array_slice($pre, $i + 1, count($pre) - $i),
-		array_slice($vin, $i + 1, count($pre) - $i));
+	private function find (array $data, int $target, int $start, int $end): bool
+	{
+		if ($start > $end) {
+			return false;
+		}
 
-	return $node;
+		$middle = (int)(($start + $end) / 2);
+
+		if ($data[$middle] == $target) {
+			return true;
+		}
+		if ($data[$middle] > $target) {
+			return $this->find($data, $target, $start, $middle - 1);
+		}
+		return $this->find($data, $target, $middle + 1, $end);
+	}
 }
 
-var_dump(reConstructBinaryTree([1, 2, 3, 4, 5, 6, 7], [3, 2, 4, 1, 6, 5, 7]));
+$s = new Solution();
+var_dump($s->findNumberIn2DArray([
+	[1, 4, 7, 11, 15],
+	[2, 5, 8, 12, 19],
+	[3, 6, 9, 16, 22],
+	[10, 13, 14, 17, 24],
+	[18, 21, 23, 26, 30]
+], 5));
