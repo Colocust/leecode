@@ -14,6 +14,6 @@ class Solution
 				return $numbers[$i];
 			}
 		}
-		return null;
+		return $numbers[0];
 	}
 }
