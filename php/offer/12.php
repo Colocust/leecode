@@ -13,64 +13,54 @@ class Solution
 		if (strlen($word) == 0) {
 			return true;
 		}
-		if (count($board) == 0 || count($board[0]) == 0) {
+		if (empty($word)) {
 			return false;
 		}
 
-		$next = [];
-		foreach ($board as $i => $item) {
-			foreach ($item as $j => $v) {
-				if ($v == $word[0]) {
-					$next[] = [$i, $j];
+		if (count($board) * count($board[0]) < strlen($word)) {
+			return false;
+		}
+
+		for ($i = 0; $i < count($board); $i++) {
+			for ($j = 0; $j < count($board[0]); $j++) {
+				if ($this->findPath($board, $word, 0, $i, $j)) {
+					return true;
 				}
 			}
 		}
-		if (empty($next)) {
-			return false;
-		}
 
-		$result = false;
-		foreach ($next as $v) {
-			$data = $board;
-			$data[$v[0]][$v[1]] = false;
-			$result = $result || $this->find($data, $v[0], $v[1], substr($word, 1, strlen($word) - 1));
-		}
-		return $result;
+		return false;
 	}
 
-	function find (array $board, int $i, int $j, $word): bool
+	function findPath (array $board, string $word, int $index, int $i, int $j): bool
 	{
-		if (strlen($word) == 0) {
+		if ($index == strlen($word)) {
 			return true;
 		}
-
-		$next = [];
-		if ($i < count($board) - 1 && $board[$i + 1][$j] == $word[0]) {
-			$next[] = [$i + 1, $j];
-		}
-		if ($i > 0 && $board[$i - 1][$j] == $word[0]) {
-			$next[] = [$i - 1, $j];
-		}
-		if ($j < count($board[0]) - 1 && $board[$i][$j + 1] == $word[0]) {
-			$next[] = [$i, $j + 1];
-		}
-		if ($j > 0 && $board[$i][$j - 1] == $word[0]) {
-			$next[] = [$i, $j - 1];
-		}
-		if (count($next) == 0) {
+		if ($i < 0 || $j < 0 || $i == count($board) || $j == count($board[0])) {
 			return false;
 		}
-
-		$result = false;
-		foreach ($next as $v) {
-			$data = $board;
-			$data[$v[0]][$v[1]] = false;
-
-			$result = $result || $this->find($data, $v[0], $v[1], substr($word, 1, strlen($word) - 1));
+		if ($board[$i][$j] != $word[$index]) {
+			return false;
 		}
-		return $result;
+		$board[$i][$j] = " ";
+
+		$index++;
+		if ($this->findPath($board, $word, $index, $i - 1, $j)) {
+			return true;
+		}
+		if ($this->findPath($board, $word, $index, $i + 1, $j)) {
+			return true;
+		}
+		if ($this->findPath($board, $word, $index, $i, $j - 1)) {
+			return true;
+		}
+		if ($this->findPath($board, $word, $index, $i, $j + 1)) {
+			return true;
+		}
+		return false;
 	}
 }
 
 $s = new Solution();
-var_dump($s->exist([["a", "b"], ["c", "d"]], "abcd"));
+var_dump($s->exist([["a"]], "a"));
