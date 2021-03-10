@@ -1,29 +1,31 @@
 <?php
 
-class Solution {
+class Solution
+{
 
-    /**
-     * @param String $s
-     * @return Integer
-     */
-    function lengthOfLongestSubstring($s) {
-        $left = 0;
-        $right = -1;
+	/**
+	 * @param String $s
+	 * @return Integer
+	 */
+	function lengthOfLongestSubstring ($s)
+	{
+		$ret = 0;
 
-        $map = [];
-        $ret = 0;
-        while ($left < strlen($s)) {
-            if ($right + 1 < strlen($s) && !isset($map[$s[$right + 1]])) {
-                $map[$s[$right + 1]] = 1;
-                $right++;
-            } else {
-                unset($map[$s[$left]]);
-                $left++;
-            }
-            $ret = max($ret, $right - $left + 1);
-        }
-        return $ret;
-    }
+		for ($i = 0; $i < strlen($s); $i++) {
+			$item = [];
+			$item[$s[$i]] = true;
+
+			for ($j = $i + 1; $j < strlen($s); $j++) {
+				if (isset($item[$s[$j]])) {
+					break;
+				}
+				$item[$s[$j]] = true;
+			}
+			$ret = max($ret, $j - $i);
+		}
+
+		return $ret;
+	}
 }
 
 $str = 'pwwkew';
