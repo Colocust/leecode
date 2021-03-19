@@ -13,7 +13,7 @@ class Solution
 
 		while ($x) {
 			$ans = $ans * 10 + (int)($x % 10);
-			$x = (int)($x / 10);
+			$x = ($x / 10) | 0;
 		}
 
 		if ($ans > (pow(2, 31) - 1) || $ans < (pow(-2, 31) - 1)) {

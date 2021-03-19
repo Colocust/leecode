@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="184b7b94-08ac-4470-8b85-c9609c70edc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/7.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/7.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +121,13 @@
       <workItem from="1611063693674" duration="1051000" />
       <workItem from="1614497618817" duration="71000" />
       <workItem from="1615097045280" duration="4598000" />
+      <workItem from="1615207469644" duration="4811000" />
+      <workItem from="1615269165294" duration="3431000" />
+      <workItem from="1615279307211" duration="7678000" />
+      <workItem from="1615342348304" duration="6975000" />
+      <workItem from="1615364948485" duration="3140000" />
+      <workItem from="1615447888193" duration="3111000" />
+      <workItem from="1616139969293" duration="2696000" />
     </task>
     <servers />
   </component>
@@ -127,9 +135,17 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="544" y="377" key="NewPhpFileDialog" timestamp="1615101389695">
+    <state x="544" y="377" key="NewPhpFileDialog" timestamp="1616139989002">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="544" y="377" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1615101389695" />
+    <state x="544" y="377" key="NewPhpFileDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1616139989002" />
+    <state x="544" y="377" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1615211322518" />
+    <state x="544" y="361" key="NewPhpFileDialog/0.25.1440.802/1440.25.1920.1055@0.25.1440.802" timestamp="1615453494476" />
+    <state x="2165" y="467" key="NewPhpFileDialog/0.25.1440.802/1440.25.1920.1055@1440.25.1920.1055" timestamp="1615284292490" />
+    <state x="544" y="361" key="NewPhpFileDialog/0.25.1440.802@0.25.1440.802" timestamp="1615297575371" />
+    <state x="443" y="225" key="refactoring.ChangeSignatureDialog" timestamp="1615272483602">
+      <screen x="0" y="25" width="1440" height="802" />
+    </state>
+    <state x="443" y="225" key="refactoring.ChangeSignatureDialog/0.25.1440.802/1440.25.1920.1055@0.25.1440.802" timestamp="1615272483602" />
   </component>
 </project>
