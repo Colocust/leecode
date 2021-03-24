@@ -1,44 +1,28 @@
 <?php
 
-class CQueue {
-    private $stack;
-    private $popStack;
+class Solution
+{
 
-    /**
-     */
-    function __construct() {
-        $this->stack = [];
-        $this->popStack = [];
-    }
+	/**
+	 * @param Integer $x
+	 * @return Boolean
+	 */
+	function isPalindrome ($x)
+	{
+		if ($x < 0) {
+			return false;
+		}
 
-    /**
-     * @param Integer $value
-     * @return NULL
-     */
-    function appendTail($value) {
-        $this->stack[] = $value;
-        return null;
-    }
+		$result = 0;
+		$data = $x;
 
-    /**
-     * @return Integer
-     */
-    function deleteHead() {
-        if (empty($this->popStack)) {
-            while (!empty($this->stack)) {
-                $this->popStack[] = array_pop($this->stack);
-            }
-        }
-        if (empty($this->popStack)) {
-            return -1;
-        }
-        return array_pop($this->popStack);
-    }
+		while ($data) {
+			$result = $result * 10 + $data % 10;
+			$data = (int)($data / 10);
+		}
+		return $result == $x;
+	}
 }
 
-/**
- * Your CQueue object will be instantiated and called as such:
- * $obj = CQueue();
- * $obj->appendTail($value);
- * $ret_2 = $obj->deleteHead();
- */
+$s = new Solution();
+var_dump($s->isPalindrome(121));
