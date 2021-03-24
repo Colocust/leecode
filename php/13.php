@@ -34,14 +34,10 @@ class Solution
 			]
 		];
 
-		$ignore = [
-			'V', 'L', 'D', 'M'
-		];
-
 		$res = 0;
 		$len = strlen($s);
 		for ($i = 0; $i < $len;) {
-			if ($i + 1 == $len || in_array($s[$i], $ignore) || !isset($case[$s[$i]][$s[$i + 1]])) {
+			if ($i + 1 == $len || !isset($case[$s[$i]][$s[$i + 1]])) {
 				$res += $map[$s[$i]];
 				$i++;
 			} else {
