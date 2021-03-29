@@ -1,69 +1,88 @@
 <?php
 
-class Solution {
+class Solution
+{
+//时间复杂度O(n) 空间复杂度O(n) 使用map存储
+//	/**
+//	 * @param Integer[] $numbers
+//	 * @param Integer $target
+//	 * @return Integer[]
+//	 */
+//	function twoSum ($numbers, $target)
+//	{
+//		$map = [];
+//		$length = count($numbers);
+//
+//		for ($i = 0; $i < $length; $i++) {
+//			$map[$numbers[$i]] = $i;
+//		}
+//
+//		for ($j = 0; $j < $length; $j++) {
+//			if (isset($map[$target - $numbers[$j]])) {
+//				$index = $map[$target - $numbers[$j]];
+//				return [++$j, ++$index];
+//			}
+//		}
+//		return [];
+//	}
 
-    /**
-     * @param Integer[] $numbers
-     * @param Integer $target
-     * @return Integer[]
-     */
+//时间复杂度O(nlogn) 空间复杂度O(1) 二分查找
+//	/**
+//	 * @param Integer[] $numbers
+//	 * @param Integer $target
+//	 * @return Integer[]
+//	 */
+//	function twoSum ($numbers, $target)
+//	{
+//		$length = count($numbers);
+//		for ($i = 0; $i < $length; $i++) {
+//			$t = $target - $numbers[$i];
+//			$index = $this->search($i + 1, $length - 1, $t, $numbers);
+//			if ($index) {
+//				return [++$i, ++$index];
+//			}
+//		}
+//		return [];
+//	}
+//
+//	function search (int $start, int $end, int $target, array $numbers): int
+//	{
+//		if ($start > $end) {
+//			return 0;
+//		}
+//		$middle = (int)(($start + $end) / 2);
+//		if ($numbers[$middle] == $target) {
+//			return $middle;
+//		}
+//		if ($numbers[$middle] > $target) {
+//			return $this->search($start, $middle - 1, $target, $numbers);
+//		} else {
+//			return $this->search($middle + 1, $end, $target, $numbers);
+//		}
+//	}
 
-    function twoSum($numbers, $target) {
-        $temp = [];
-        foreach ($numbers as $k => $v) {
-            $temp[$v] = $k;
-        }
 
-        foreach ($numbers as $k => $v) {
-            $a = $target - $v;
-            if (isset($temp[$a])) {
-                return [++$k, ++$temp[$a]];
-            }
-        }
-        return [];
-    }
-//  function twoSum($numbers, $target) {
-//    $i = 0;
-//    $j = count($numbers) - 1;
-//    while ($i < $j) {
-//      $sum = $numbers[$i] + $numbers[$j];
-//      if ($sum == $target) {
-//        return [$i + 1, $j + 1];
-//      }
-//      if ($sum < $target) {
-//        $i++;
-//      } else {
-//        $j--;
-//      }
-//    }
-//    return [];
-//  }
-//  function twoSum($numbers, $target) {
-//    for ($i = 0; $i < count($numbers); $i++) {
-//      $data = $target - $numbers[$i];
-//
-//      $result = $this->search($numbers, $i + 1, count($numbers), $data);
-//      if ($result) {
-//        return [$i + 1, $result + 1];
-//      }
-//    }
-//    return [];
-//  }
-//
-//  function search($numbers, $left, $right, $target) {
-//    while ($right >= $left) {
-//      $mid = (int)(($left + $right) / 2);
-//
-//      if ($numbers[$mid] == $target) return $mid;
-//
-//      if ($numbers[$mid] > $target) $right = $mid - 1;
-//      if ($numbers[$mid] < $target) $left = $mid + 1;
-//    }
-//    return 0;
-//  }
+//时间复杂度O(n) 空间复杂度O(1)
+//	/**
+//	 * @param Integer[] $numbers
+//	 * @param Integer $target
+//	 * @return Integer[]
+//	 */
+//	function twoSum ($numbers, $target)
+//	{
+//		$left = 0;
+//		$right = count($numbers) - 1;
+//		while ($left < $right) {
+//			$num = $numbers[$left] + $numbers[$right];
+//			if ($num == $target) {
+//				return [++$left, ++$right];
+//			}
+//			if ($num > $target) {
+//				$right--;
+//			} else {
+//				$left++;
+//			}
+//		}
+//		return [];
+//	}
 }
-
-$numbers = [2, 7, 11, 15];
-$target = 9;
-$solution = new Solution();
-var_dump($solution->twoSum($numbers, $target));
